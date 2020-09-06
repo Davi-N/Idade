@@ -16,5 +16,11 @@ def test_IdadeAtualNomeVazio():
 def test_IdadeAtualAnoMaior():
     assert IdadeAtual("t","30/03/2050") == False
 
-def test_IdadeAtualAnoMaior():
+def test_IdadeAtualDataCorreta():
     assert IdadeAtual("t","30/03/2010") == 10
+
+def test_IdadeAtualAniversarioProximoMes():
+    assert IdadeAtual("t","30/10/2010") == 9
+
+def test_IdadeAtualAniversariohj():
+    assert IdadeAtual("t","06/09/2010") == "Parabéns pelos 10 anos"

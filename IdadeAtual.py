@@ -14,9 +14,16 @@ def IdadeAtual(nome,datanasc):
         print("Por favor digite um Ano válido")
         return False
     idade= dataatual.year - datanasc.year
-    print(nome+" você tem  ",idade," anos.")
+    if(datanasc.month> dataatual.month):
+        idade-=1
+    if (datanasc.month == dataatual.month and datanasc.day == dataatual.day):
+        print("Parabéns pelos "+str(idade)+" anos")
+        return "Parabéns pelos "+str(idade)+" anos"
+    print(nome+" você tem "+str(idade)+" anos.")
     return idade
 
+print("Calculo da idade atual")
 nome = input("Nome: ")
 d1 = input("Data Nascimento(dia/mes/ano): ")
 IdadeAtual(nome,d1)
+
